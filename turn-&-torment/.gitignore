@@ -1,3 +1,19 @@
-# Godot 4+ specific ignores
+# Godot 4+ specific ignores.
 .godot/
 /android/
+
+# Dedicated build output directories.
+build/
+bin/
+export/
+dist/
+
+# Binaries & packages (Linux, Windows, and Godot packs).
+*.x86_64
+*.pck
+*.exe
+
+# Linux temporary / desktop metadata.
+*~
+.directory
+.fuse_hidden*
