@@ -46,30 +46,31 @@ theme_override_constants/margin_top = 25
 [node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer" unique_id=1225217920]
 layout_mode = 2
 
-[node name="outerborder" type="ColorRect" parent="Control/MarginContainer/CenterContainer" unique_id=50030179]
+[node name="outerborder_skin" type="ColorRect" parent="Control/MarginContainer/CenterContainer" unique_id=50030179]
 custom_minimum_size = Vector2(205, 115)
 layout_mode = 2
 color = Color(0.11679999, 0.13740653, 0.29255682, 1)
 
-[node name="border" type="ColorRect" parent="Control/MarginContainer/CenterContainer" unique_id=1545982026]
+[node name="border_skin" type="ColorRect" parent="Control/MarginContainer/CenterContainer" unique_id=1545982026]
 custom_minimum_size = Vector2(200, 110)
 layout_mode = 2
 color = Color(0.03137255, 0.09803922, 0.13333334, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1761875073]
+[node name="border_skeleton" type="StaticBody2D" parent="." unique_id=1761875073]
+collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1309604917]
+[node name="b_border" type="CollisionShape2D" parent="border_skeleton" unique_id=1309604917]
 position = Vector2(164, 158)
 shape = SubResource("WorldBoundaryShape2D_xh6ni")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1321017754]
+[node name="l_border" type="CollisionShape2D" parent="border_skeleton" unique_id=1321017754]
 position = Vector2(129, 97)
 shape = SubResource("WorldBoundaryShape2D_uiafn")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2128278326]
+[node name="t_border" type="CollisionShape2D" parent="border_skeleton" unique_id=2128278326]
 position = Vector2(163, 0)
 shape = SubResource("WorldBoundaryShape2D_o1hqj")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=760369087]
+[node name="r_border" type="CollisionShape2D" parent="border_skeleton" unique_id=760369087]
 position = Vector2(170, 97)
 shape = SubResource("WorldBoundaryShape2D_g7ueq")

@@ -4,9 +4,13 @@
 [ext_resource type="Script" uid="uid://mlsljlwplir0" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xh6ni"]
+size = Vector2(14, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uiafn"]
 size = Vector2(10, 10)
 
 [node name="player" type="CharacterBody2D" unique_id=1840357641]
+collision_layer = 2
 script = ExtResource("1_g2els")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=974193714]
@@ -16,3 +20,10 @@ texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957586113]
 shape = SubResource("RectangleShape2D_xh6ni")
+
+[node name="hurt_box" type="Area2D" parent="." unique_id=1489606050]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box" unique_id=375699038]
+shape = SubResource("RectangleShape2D_uiafn")
